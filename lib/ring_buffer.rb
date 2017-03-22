@@ -25,7 +25,7 @@ class RingBuffer
     raise "index out of bounds" unless (length > 0)
 
     val = self[length - 1] #val is the last el in array
-    self[length - 1] = nil # set it to nil
+    self[length - 1] = nil # set it to nil 
     self.length -= 1 
 
     val # return the value you've removed
@@ -57,7 +57,6 @@ class RingBuffer
     self.start_idx = (start_idx - 1) % capacity
     self[0] = val
 
-    # nil
   end
 
   protected
